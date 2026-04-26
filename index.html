@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>لـ توتا ❤️</title>
+
+<style>
+body {
+    font-family: Arial;
+    text-align: center;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    color: white;
+    padding: 30px;
+    overflow-x: hidden;
+}
+
+.box {
+    background: rgba(0,0,0,0.4);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 600px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+input, button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+/* قلوب متحركة */
+.heart {
+    position: fixed;
+    color: #ff4d6d;
+    animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+    0% {transform: translateY(0); opacity: 1;}
+    100% {transform: translateY(-100vh); opacity: 0;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="box show" id="login">
+    <h2>ادخلي الباسورد 🙈</h2>
+    <input type="password" id="pass">
+    <br><br>
+    <button onclick="checkPass()">دخول</button>
+</div>
+
+<div class="hidden" id="content">
+
+<div class="box">
+<h2>⏳ بقالنا مع بعض:</h2>
+<p id="counter"></p>
+</div>
+
+<div class="box"><p>
+يوووووسف الحقنييي<br><br>
+كانت اول كلمة اتقالت منك كنتي جاية بمصيبة وقلبك كان حاسس ان نا ال هلحقك منها عمري ما هنسى ابدا الكلمة دي
+</p></div>
+
+<div class="box"><p>
+عمري ما هنسى ان اول مرة اشوفك فعلا كانت ونتي بتجيبي الفون كنتي رايحة الكنيسة ولابسة التوب الاحمر دخلتي ونا مركزتش ف حاجة غير ف ضوافرك وشعرك
+</p></div>
+
+<div class="box"><p>
+تاني مرة شوفتك فيها وكنت متوتر بصراحة كنت منزل ستورة ونا ف المحل والجراب ال ورايا عجبك قولتيلي لو عندك منه لتلفوني مكانش عندي بس قولت انا مش هحل غير لما اجيب الجراب انا بحب جرابك اوي عشان كان سبب ف اني اشوفك
+</p></div>
+
+<div class="box"><p>
+مش هنسى كل خناقة اتخانقناها كانت بتخلص بصعوبة بصراحة بس كانت بتخلص بكل حب وتفاهم بينا
+</p></div>
+
+<div class="box"><p>
+مش هنسى اول مرة قولتيلي تعالى معايا الكنيسة عشان مش عايزة تروحي لوحدك وخايفة تشوفي الزفتة صاحبتك وان نا امتر واخد هتكوني مرتاحة معاه لو شوفتيها اليوم دا الحيوانة توتا قلعت الجاكت وقال ايه مش عايزة تلبسه لما نزلنا ساعتها ادتيني الشنطة بتاعتك امسكها قولت لنفسي هي وصلت اني امسك الشنطة بس كان احساس حلو مش كدب
+</p></div>
+
+<div class="box"><p>
+حاجات كتير اوووي مش هنساها معاكي
+</p></div>
+
+<div class="box"><p>
+عشان مطولش عليكي<br><br>
+انتي اكتر واحدة حبيتها واكتر واحدة ارتاحت معاها واكتر واحدة حسيت معاها انك سند ليا فعلا انا عمري ما هلاقي زيك ابدا عشان نتي مفيش حد ف طيبتك وحنيتك
+</p></div>
+
+<div class="box"><p>
+انا اسف يا نيرفانا على ال نا عملته وعلى اني خليتك تتغيري واني خليتك تحسي حاجة انتي مش حباها سامحيني واديني فرصة انا بحبك اكتر من نفسي بحبك اكتر حاجة ف حياتي عشان نتي حياتي اصلا ❤️
+</p></div>
+
+</div>
+
+<script>
+function checkPass() {
+    var password = document.getElementById("pass").value;
+    if(password === "tota🙈") {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("content").classList.remove("hidden");
+        showBoxes();
+        hearts();
+    } else {
+        alert("غلط 😏");
+    }
+}
+
+// ظهور تدريجي
+function showBoxes() {
+    let boxes = document.querySelectorAll(".box");
+    boxes.forEach((box, i) => {
+        setTimeout(() => {
+            box.classList.add("show");
+        }, i * 800);
+    });
+}
+
+// العداد
+var startDate = new Date("2024-08-17");
+
+function updateCounter() {
+    var now = new Date();
+    var diff = now - startDate;
+
+    var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    var minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+    document.getElementById("counter").innerHTML =
+        days + " يوم و " + hours + " ساعة و " + minutes + " دقيقة ❤️";
+}
+
+setInterval(updateCounter, 1000);
+
+// قلوب
+function hearts() {
+    setInterval(() => {
+        let heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 6000);
+    }, 500);
+}
+</script>
+
+</body>
+</html>
