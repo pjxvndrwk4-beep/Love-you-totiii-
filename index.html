@@ -1,171 +1,34 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<title>لـ توتا ❤️</title>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday Tota 🎂</title>
 <style>
-body {
-    font-family: Arial;
-    text-align: center;
-    background: linear-gradient(to right, #ff758c, #ff7eb3);
-    color: white;
-    padding: 30px;
-    overflow-x: hidden;
-}
-
-.box {
-    background: rgba(0,0,0,0.4);
-    padding: 25px;
-    border-radius: 15px;
-    margin: 20px auto;
-    max-width: 600px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 1s ease;
-}
-
-.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-input, button {
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-}
-
-button {
-    cursor: pointer;
-}
-
-.hidden {
-    display: none;
-}
-
-/* قلوب متحركة */
-.heart {
-    position: fixed;
-    color: #ff4d6d;
-    animation: floatUp 6s linear infinite;
-}
-
-@keyframes floatUp {
-    0% {transform: translateY(0); opacity: 1;}
-    100% {transform: translateY(-100vh); opacity: 0;}
-}
+*{box-sizing:border-box}body{margin:0;font-family:Arial;background:linear-gradient(-45deg,#ff9ec4,#ffd6e7,#fff,#ffe1ef);background-size:400% 400%;animation:bg 12s ease infinite;color:#fff;overflow:hidden}
+@keyframes bg{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+.page{display:none;height:100vh;align-items:center;justify-content:center;padding:20px}
+.show{display:flex}
+.card{max-width:720px;background:rgba(255,255,255,.18);backdrop-filter:blur(14px);padding:30px;border-radius:24px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+button{padding:12px 28px;border:none;border-radius:30px;font-size:18px;cursor:pointer}
+#gift{font-size:110px;cursor:pointer;animation:b 2s infinite}@keyframes b{50%{transform:translateY(-10px)}}
+p{line-height:2;font-size:22px}
+.c{position:fixed;top:-20px;animation:f 4s linear forwards}@keyframes f{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
 </style>
-</head>
-
-<body>
-
-<div class="box show" id="login">
-    <h2>ادخلي الباسورد 🙈</h2>
-    <input type="password" id="pass">
-    <br><br>
-    <button onclick="checkPass()">دخول</button>
-</div>
-
-<div class="hidden" id="content">
-
-<div class="box">
-<h2>⏳ بقالنا مع بعض:</h2>
-<p id="counter"></p>
-</div>
-
-<div class="box"><p>
-يوووووسف الحقنييي<br><br>
-كانت اول كلمة اتقالت منك كنتي جاية بمصيبة وقلبك كان حاسس ان نا ال هلحقك منها عمري ما هنسى ابدا الكلمة دي
-</p></div>
-
-<div class="box"><p>
-عمري ما هنسى ان اول مرة اشوفك فعلا كانت ونتي بتجيبي الفون كنتي رايحة الكنيسة ولابسة التوب الاحمر دخلتي ونا مركزتش ف حاجة غير ف ضوافرك وشعرك
-</p></div>
-
-<div class="box"><p>
-تاني مرة شوفتك فيها وكنت متوتر بصراحة كنت منزل ستورة ونا ف المحل والجراب ال ورايا عجبك قولتيلي لو عندك منه لتلفوني مكانش عندي بس قولت انا مش هحل غير لما اجيب الجراب انا بحب جرابك اوي عشان كان سبب ف اني اشوفك
-</p></div>
-
-<div class="box"><p>
-مش هنسى كل خناقة اتخانقناها كانت بتخلص بصعوبة بصراحة بس كانت بتخلص بكل حب وتفاهم بينا
-</p></div>
-
-<div class="box"><p>
-مش هنسى اول مرة قولتيلي تعالى معايا الكنيسة عشان مش عايزة تروحي لوحدك وخايفة تشوفي الزفتة صاحبتك وان نا امتر واخد هتكوني مرتاحة معاه لو شوفتيها اليوم دا الحيوانة توتا قلعت الجاكت وقال ايه مش عايزة تلبسه لما نزلنا ساعتها ادتيني الشنطة بتاعتك امسكها قولت لنفسي هي وصلت اني امسك الشنطة بس كان احساس حلو مش كدب
-</p></div>
-
-<div class="box"><p>
-حاجات كتير اوووي مش هنساها معاكي
-</p></div>
-
-<div class="box"><p>
-عشان مطولش عليكي<br><br>
-انتي اكتر واحدة حبيتها واكتر واحدة ارتاحت معاها واكتر واحدة حسيت معاها انك سند ليا فعلا انا عمري ما هلاقي زيك ابدا عشان نتي مفيش حد ف طيبتك وحنيتك
-</p></div>
-
-<div class="box"><p>
-انا اسف يا نيرفانا على ال نا عملته وعلى اني خليتك تتغيري واني خليتك تحسي حاجة انتي مش حباها سامحيني واديني فرصة انا بحبك اكتر من نفسي بحبك اكتر حاجة ف حياتي عشان نتي حياتي اصلا ❤️
-</p></div>
-
-</div>
-
+</head><body>
+<div id=p1 class="page show"><div class=card><div id=gift>🎁</div><h1>To : Tota 🤍</h1><p>فيه هدية صغيرة مستنياكي...<br>اضغطي على الهدية 🎀</p></div></div>
+<div id=p2 class=page><div class=card><h1>🎂 Happy Birthday 🎂</h1><h2>1 / 7 / 2004</h2><p id=msg></p><button onclick=nextMsg()>التالي</button></div></div>
 <script>
-function checkPass() {
-    var password = document.getElementById("pass").value;
-    if(password === "tota") {
-        document.getElementById("login").style.display = "none";
-        document.getElementById("content").classList.remove("hidden");
-        showBoxes();
-        hearts();
-    } else {
-        alert("غلط 😏");
-    }
-}
-
-// ظهور تدريجي
-function showBoxes() {
-    let boxes = document.querySelectorAll(".box");
-    boxes.forEach((box, i) => {
-        setTimeout(() => {
-            box.classList.add("show");
-        }, i * 800);
-    });
-}
-
-// العداد
-var startDate = new Date("2024-08-17");
-
-function updateCounter() {
-    var now = new Date();
-    var diff = now - startDate;
-
-    var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    var minutes = Math.floor((diff / (1000 * 60)) % 60);
-
-    document.getElementById("counter").innerHTML =
-        days + " يوم و " + hours + " ساعة و " + minutes + " دقيقة ❤️";
-}
-
-setInterval(updateCounter, 1000);
-
-// قلوب
-function hearts() {
-    setInterval(() => {
-        let heart = document.createElement("div");
-        heart.className = "heart";
-        heart.innerHTML = "❤️";
-        heart.style.left = Math.random() * 100 + "vw";
-        heart.style.fontSize = (Math.random() * 20 + 10) + "px";
-        document.body.appendChild(heart);
-
-        setTimeout(() => {
-            heart.remove();
-        }, 6000);
-    }, 500);
-}
-</script>
-
-</body>
-</html>
+const msgs=[
+`انهاردة يوم مميز بلنسبالك وطبعا بلنسبالي انا كمان يمكن مكنتش ف حياتك ف يوم زي دا بس انا مبسوط اوي اني بشاركك اليوم دا احلى يوم ف الدنيا كلها عشان نيرفانا جت فييه.`,
+`من ساعة ما دخلتي حياتي ونتي مغيراها ومخلياني مركز ف كل التواريخ. يوم زي دا عمري ما هنساه.`,
+`انا اه يمكن مرة اتلخبطت ف التاريخ، لكن من ساعتها بقيت مركز فيه ومستحيل انساه.`,
+`عايزك تعرفي ف يوم زي دا اني بحبك اوي اوي فوق ما تتخيلي، وانتي كل حاجة ليا.`,
+`كل سنة ونتي طيبة يا اجمل واحن بنت ف الدنيا. كل سنة ونتي ناجحة ويارب اشوفك احسن دكتورة ف الدنيا. بتمنى افضل اشوف ضحكتك دايما منورة الدنيا. 🤍`
+];
+let i=0;
+gift.onclick=()=>{p1.classList.remove('show');p2.classList.add('show');conf();show()};
+function show(){msg.textContent=msgs[i]}
+function nextMsg(){i++; if(i<msgs.length){show()}else{msg.innerHTML='🎉 Happy Birthday Tota 🎉<br><br>بحبك 🤍';}}
+function conf(){for(let k=0;k<80;k++){let d=document.createElement('div');d.className='c';d.innerHTML=['🎉','✨','🤍','🎂'][Math.floor(Math.random()*4)];d.style.left=Math.random()*100+'vw';d.style.fontSize=(18+Math.random()*18)+'px';document.body.appendChild(d);setTimeout(()=>d.remove(),4000);}}
+</script></body></html>
